@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  border-bottom: 1px solid #eaeaea;
+  gap: 24px;
+}
+.headerHome {
+  display: flex;
+  gap: 24px;
+  background-color:aqua
+}
+.headerAbout {
+  display: flex;
+  gap: 24px;
+  background-color:khaki
+}

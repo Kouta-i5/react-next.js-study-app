@@ -1,0 +1,35 @@
+.headline {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 16px 0 0 0;
+  color: var(--foreground);
+  opacity: 0.8;
+}
+
+.button {
+  background: var(--foreground);
+  color: var(--background);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background: var(--button-primary-hover);
+} 
