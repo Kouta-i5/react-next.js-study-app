@@ -2,14 +2,88 @@
   display: flex;
   border-bottom: 1px solid #eaeaea;
   gap: 24px;
+  padding: 16px;
 }
+
 .headerHome {
   display: flex;
   gap: 24px;
-  background-color:aqua
+  background-color: aqua;
 }
+
 .headerAbout {
   display: flex;
   gap: 24px;
-  background-color:khaki
+  background-color: khaki;
+}
+
+/* ボタンスタイルのリンク */
+.navButton {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.navButton:hover {
+  background-color: #0051cc;
+  transform: translateY(-1px);
+}
+
+.navButton:active {
+  transform: translateY(0);
+}
+
+.navButton:focus {
+  outline: 2px solid #0070f3;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+}
+
+/* 各ページ用のボタンスタイル */
+.homeButton {
+  background-color: #22c55e;
+}
+
+.homeButton:hover {
+  background-color: #16a34a;
+}
+
+.aboutButton {
+  background-color: #f59e0b;
+}
+
+.aboutButton:hover {
+  background-color: #d97706;
+}
+
+.useStateButton {
+  background-color: #8b5cf6;
+}
+
+.useStateButton:hover {
+  background-color: #7c3aed;
+}
+
+.useEffectButton {
+  background-color: #ec4899;
+}
+
+.useEffectButton:hover {
+  background-color: #db2777;
+}
+
+.useCallbackButton {
+  background-color: #06b6d4;
+}
+
+.useCallbackButton:hover {
+  background-color: #0891b2;
 }

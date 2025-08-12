@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Headline } from "@/components/Headline";
 import { Link } from "@/components/Link";
 import styles from "@/styles/page.module.css";
-import {useEffect,React} from "react"
+import { useEffect } from "react";
 
 export default function Home() {
   const handleClick = () => {

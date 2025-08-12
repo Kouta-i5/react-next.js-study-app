@@ -1,0 +1,438 @@
+/* useStateページ専用スタイル */
+
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* セクションスタイル */
+.section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #667eea;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #764ba2;
+}
+
+/* ボタンスタイル */
+.buttonGroup {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.button:hover::before {
+  left: 100%;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.darkButton {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+}
+
+.darkButton:hover {
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
+}
+
+/* 入力フィールド */
+.input {
+  padding: 12px 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 350px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: white;
+}
+
+/* 挨拶メッセージ */
+.greeting {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #667eea;
+  margin: 20px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* メッセージボックス */
+.message {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #1565c0; /* 文字色を追加 */
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #2196f3;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Todoリスト */
+.todoInput {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.todoInput .input {
+  flex: 1;
+  max-width: none;
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.todoItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.todoItem input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #667eea;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #6c757d;
+}
+
+.deleteButton {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+.deleteButton:hover {
+  background: linear-gradient(135deg, #ee5a52 0%, #d63031 100%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* フォーム */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* ユーザー情報 */
+.userInfo {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.userInfo h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 8px;
+}
+
+.userInfo p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.userInfo p:last-child {
+  border-bottom: none;
+}
+
+/* 説明文 */
+.explanation {
+  font-size: 14px;
+  color: #666;
+  margin: 15px 0;
+  line-height: 1.6;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+/* 概念説明 */
+.concept {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.concept h3 {
+  margin: 20px 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  padding-left: 15px;
+}
+
+.concept h3::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+}
+
+.concept ul {
+  margin: 10px 0;
+  padding-left: 25px;
+}
+
+.concept li {
+  margin: 8px 0;
+  line-height: 1.6;
+  color: #555;
+  position: relative;
+}
+
+.concept li::before {
+  content: '•';
+  color: #667eea;
+  font-weight: bold;
+  position: absolute;
+  left: -15px;
+}
+
+.concept code {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  display: inline-block;
+  margin: 5px 0;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .page {
+    padding: 10px;
+  }
+  
+  .main {
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+  }
+  
+  .button {
+    width: 100%;
+  }
+  
+  .todoInput {
+    flex-direction: column;
+  }
+  
+  .todoInput .input {
+    width: 100%;
+  }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+  .section {
+    background: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  .section h2 {
+    color: #ecf0f1;
+  }
+  
+  .input {
+    background: #34495e;
+    border-color: #5a6c7d;
+    color: #ecf0f1;
+  }
+  
+  .input:focus {
+    background: #2c3e50;
+  }
+  
+  .todoItem {
+    background: #34495e;
+    border-color: #5a6c7d;
+    color: #ecf0f1;
+  }
+  
+  .userInfo {
+    background: #34495e;
+    border-color: #5a6c7d;
+    color: #ecf0f1;
+  }
+  
+  .concept {
+    background: #34495e;
+    border-color: #5a6c7d;
+    color: #ecf0f1;
+  }
+  
+  .explanation {
+    background: #34495e;
+    color: #bdc3c7;
+  }
+}
